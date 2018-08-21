@@ -26,6 +26,6 @@ public class WelcomeControllerTest {
     public void getWelcome() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/welcome").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("<!DOCTYPE HTML>\n<html>\n<head>\n    <title>Concrete: Coders On Beer DevOps</title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n</head>\n<body>\n    <p >Bem vindo, DevOps!</p>\n</body>\n</html>")));
+                .andExpect(content().string(equalTo("<!DOCTYPE HTML>\n<html>\n<head>\n    <title>Concrete: Coders On Beer DevOps</title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n</head>\n<body>\n    <h1>\n    <p >Bem vindo, DevOps!</p>\n    </h1>\n</body>\n</html>")));
     }
 }

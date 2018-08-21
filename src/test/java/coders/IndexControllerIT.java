@@ -36,6 +36,6 @@ public class IndexControllerIT {
     public void getIndex() throws Exception {
         ResponseEntity<String> response = template.getForEntity(base.toString(),
                 String.class);
-        assertThat(response.getBody(), equalTo("<!DOCTYPE HTML>\n<html>\n<head>\n    <title>Concrete: Coders On Beer DevOps</title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n</head>\n<body>\n    <p>Seja Bem Vindo ao Coders On Beer <a href=\"/welcome\">here</a></p>\n</body>\n</html>"));
+        assertThat(response.getBody(), equalTo("<!DOCTYPE HTML>\n<html>\n<head>\n    <title>Concrete: Coders On Beer DevOps</title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n</head>\n<body>\n    <h1>\n    <p>Seja Bem Vindo ao Coders On Beer <a href=\"/welcome\">here</a></p>\n    </h1>\n</body>\n</html>"));
     }
 }
