@@ -1,5 +1,5 @@
 FROM docker.io/maven:alpine
 WORKDIR /
-ADD coders-app.jar .
+ADD target/cs-coders-spring-app-0.1.0-SNAPSHOT.jar .
 EXPOSE 8080
-CMD java -jar coders-app.jar
+CMD java -jar cs-coders-spring-app-0.1.0-SNAPSHOT.jar
